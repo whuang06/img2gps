@@ -9,3 +9,5 @@ finetune_hf.py
 submit_files/5_4_resnet_hf_finetune/
 logs/
 label_grid_dataset.py
+preprocessing.py
+hf_preprocess.py
