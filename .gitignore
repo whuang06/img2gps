@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.arrow
+preprocessed_augmented_dataset/
+*.pth
+*.pt
+finetune_hf.py
+*.npy
+submit_files/5_4_resnet_hf_finetune/
+logs/
+label_grid_dataset.py

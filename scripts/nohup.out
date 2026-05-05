@@ -1,0 +1,78 @@
+Traceback (most recent call last):
+  File "/home/ec2-user/image2gps/scripts/train.py", line 142, in <module>
+    trained_model = train_model(model, EPOCHS, train_loader, val_loader, optimizer, scheduler, criterion, device)
+  File "/home/ec2-user/image2gps/scripts/train.py", line 45, in train_model
+    outputs = model(images)
+  File "/home/ec2-user/image2gps/.venv/lib64/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/ec2-user/image2gps/.venv/lib64/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ec2-user/image2gps/scripts/model.py", line 16, in forward
+    return self.resnet(x)
+           ~~~~~~~~~~~^^^
+  File "/home/ec2-user/image2gps/.venv/lib64/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/ec2-user/image2gps/.venv/lib64/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ec2-user/image2gps/.venv/lib64/python3.13/site-packages/torchvision/models/resnet.py", line 285, in forward
+    return self._forward_impl(x)
+           ~~~~~~~~~~~~~~~~~~^^^
+  File "/home/ec2-user/image2gps/.venv/lib64/python3.13/site-packages/torchvision/models/resnet.py", line 268, in _forward_impl
+    x = self.conv1(x)
+  File "/home/ec2-user/image2gps/.venv/lib64/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/ec2-user/image2gps/.venv/lib64/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ec2-user/image2gps/.venv/lib64/python3.13/site-packages/torch/nn/modules/conv.py", line 548, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ec2-user/image2gps/.venv/lib64/python3.13/site-packages/torch/nn/modules/conv.py", line 543, in _conv_forward
+    return F.conv2d(
+           ~~~~~~~~^
+        input, weight, bias, self.stride, self.padding, self.dilation, self.groups
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.53 GiB. GPU 0 has a total capacity of 22.06 GiB of which 982.12 MiB is free. Process 13175 has 20.49 GiB memory in use. Including non-PyTorch memory, this process has 608.00 MiB memory in use. Of the allocated memory 336.76 MiB is allocated by PyTorch, and 21.24 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/home/ec2-user/image2gps/scripts/train.py", line 142, in <module>
+    trained_model = train_model(model, EPOCHS, train_loader, val_loader, optimizer, scheduler, criterion, device)
+  File "/home/ec2-user/image2gps/scripts/train.py", line 45, in train_model
+    outputs = model(images)
+  File "/home/ec2-user/image2gps/.venv/lib64/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/ec2-user/image2gps/.venv/lib64/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ec2-user/image2gps/scripts/model.py", line 16, in forward
+    return self.resnet(x)
+           ~~~~~~~~~~~^^^
+  File "/home/ec2-user/image2gps/.venv/lib64/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/ec2-user/image2gps/.venv/lib64/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ec2-user/image2gps/.venv/lib64/python3.13/site-packages/torchvision/models/resnet.py", line 285, in forward
+    return self._forward_impl(x)
+           ~~~~~~~~~~~~~~~~~~^^^
+  File "/home/ec2-user/image2gps/.venv/lib64/python3.13/site-packages/torchvision/models/resnet.py", line 268, in _forward_impl
+    x = self.conv1(x)
+  File "/home/ec2-user/image2gps/.venv/lib64/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/ec2-user/image2gps/.venv/lib64/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ec2-user/image2gps/.venv/lib64/python3.13/site-packages/torch/nn/modules/conv.py", line 548, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ec2-user/image2gps/.venv/lib64/python3.13/site-packages/torch/nn/modules/conv.py", line 543, in _conv_forward
+    return F.conv2d(
+           ~~~~~~~~^
+        input, weight, bias, self.stride, self.padding, self.dilation, self.groups
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.53 GiB. GPU 0 has a total capacity of 22.06 GiB of which 982.12 MiB is free. Process 13175 has 20.49 GiB memory in use. Including non-PyTorch memory, this process has 608.00 MiB memory in use. Of the allocated memory 336.76 MiB is allocated by PyTorch, and 21.24 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
